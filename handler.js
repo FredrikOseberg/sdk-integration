@@ -17,13 +17,10 @@ export const testSDKs = async (event) => {
 
   if (failures.length > 0) {
     try {
-      const res = await fetch(
-        'https://hooks.zapier.com/hooks/catch/11585290/3bhobts/',
-        {
-          method: 'POST',
-          body: { data: JSON.stringify(failures) },
-        }
-      );
+      // await fetch('URL HERE', {
+      //   method: 'POST',
+      //   body: { data: JSON.stringify(failures) },
+      // });
     } catch (e) {
       console.log('Error posting to slack');
     }
