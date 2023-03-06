@@ -1,0 +1,42 @@
+{
+  "tests": [
+    {
+      "name": "gradual rollout strategy 25% - enabled",
+      "featureName": "integration-gradual25",
+      "context": {
+        "userId": "user1"
+      },
+      "expected": true
+    },
+    {
+      "name": "gradual rollout strategy 25% - disabled",
+      "featureName": "integration-gradual25",
+      "context": {
+        "userId": "user123"
+      },
+      "expected": false
+    },
+    {
+      "name": "userid strategy - enabled",
+      "featureName": "integration-userid",
+      "context": {
+        "userId": "user1"
+      },
+      "expected": true
+    },
+    {
+      "name": "userid strategy - disabled",
+      "featureName": "integration-userid",
+      "context": {},
+      "expected": false
+    },
+    {
+      "name": "userid strategy - disabled/incorrect user",
+      "featureName": "integration-userid",
+      "context": {
+        "userId": "user15"
+      },
+      "expected": false
+    }
+  ]
+}
